@@ -1,2 +1,2 @@
 # simple-calculator
-Calculator Implementation in Python
+Calculator Implementation in Python.
