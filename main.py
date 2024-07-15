@@ -47,7 +47,7 @@ instance1 = Calculate(input1, input2)
 
 #main calculator loop
 while True:
-    input3= input("What operation would you like to dooooo? 1 - Addition, 2 - Subtraction, 3 - Multiplication, 4 - Division, 5 - Quit")
+    input3= input("What operation would you like to dooooo? 1 - Addition, 2 - Subtraction, 3 - Multiplication, 4 - Division, 5 - New Inputs , 6 - Quit")
 
     if input3 == "1":
         print(str(instance1.addition(input1, input2)))
@@ -62,6 +62,26 @@ while True:
         print(str(instance1.division(input1, input2)))
         continue
     elif input3=="5":
+        while True:
+            input1 = input("Hi what would you like the first number to be?")
+            try:
+                input1=float(input1)
+                break
+            except ValueError:
+                print("Not a valid number, please try again!")
+                continue
+
+        #Input 2 While Loop
+        while True:
+            input2 = input("What would you like your second number to be?")
+            try:
+                input2=float(input2)
+                break
+            except ValueError:
+                print("Not a valid number, do you know what a number is?")
+                continue
+        instance1 = Calculate(input1, input2)
+    elif input3=="6":
         print("Ok thanks for using our calculator")
         break
     else:
